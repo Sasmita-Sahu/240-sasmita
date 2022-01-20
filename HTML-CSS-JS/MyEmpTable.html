@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, th, td {
+border: thin solid gray;
+padding: 5px;
+text-align: left;
+border-collapse: collapse;
+}
+</style>
+</head>
+<body>
+<script type="text/javascript">
+if (window.XMLHttpRequest)
+{
+// for IE7+, Firefox, Google Chrome & Safari
+xmlhttp=new XMLHttpRequest();
+}
+else
+{
+// for IE6, IE5.
+xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+}
+xmlhttp.open("GET","employeeDetails.html",false);
+xmlhttp.send();
+xmlDoc=xmlhttp.responseXML;
+document.write("<table><tr><th>Id</th><th>Name</th><th>Salary</th></tr>");
+ var records=xmlDoc.getElementsByTagName("employee");
+
+for (i=0;i<records.length;i++)
+{
+document.write("<tr><td>");
+document.write(records[i].getElementsByTagName("Id")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(records[i].getElementsByTagName("Name")[0].childNodes[0].nodeValue);
+document.write("</td><td>");
+document.write(records[i].getElementsByTagName("Salary")[0].childNodes[0].nodeValue);
+document.write("</td></tr>");
+}
+document.write("</table>");
+</script>
+&nbsp;
+</body>
+</html>
+&nbsp;

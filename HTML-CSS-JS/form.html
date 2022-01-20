@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Example</title>
+</head>
+ 
+<body>
+<form method="POST" action=form.html>
+ <table border="0" cellpadding="5" align="center">
+<tr>
+<td>Name:<font color="red">*</font></td>
+<td><input type="text" name="name" required placeholder="Enter Name"></td>
+</tr>
+<tr>
+<td>Password:<font color="red">*</font></td>
+<td><input type="Password" name="Password" required placeholder="Enter Password"></td>
+</tr> 
+<tr>
+<td>Email id:</td>
+<td><input type="Email" name="Email" required placeholder="Enter Email"></td>
+</tr>
+<tr>
+<td>DOB:</td>
+<td><input type="date" name="DOB" required placeholder="Enter dob"></td>
+</tr>
+<tr>
+<td>City:</td>
+<td><select name="City">
+  <option name="bangalore"value="bangalore">Bangalore</option>
+  <option name="sbp"value="sbp">Sambalpur</option>
+</select></td>
+</tr>
+<tr>
+<td>Gender: </td>
+<td><input type="radio" name="radiogroup1" value="radio" id="radiogroup1"> Male</input><br>
+<input type="radio" name="radiogroup1" value="radio" id="radiogroup2"> Female</input>
+</td>
+</tr>
+<tr>
+  <td>Subject:</td>
+  <td><input type="checkbox" name="sub1" value="java">Java</input><br>
+   <input type="checkbox" name="sub2" value="sql">Sql</input><br> 
+     <input type="checkbox" name="sub3" value="J2EE">J2EE</input><br> 
+</td>
+</tr>
+<td>Address:</td>
+<td><input type="textarea" name="Address" cols="35" rows="15" id="textarea"></textarea></td>
+</tr>
+ <tr>
+  <td>File</td>
+  <td><input type="file" name="Resume"/></td>
+</tr>
+<td><input type="submit" name="submit"/></td>
+<td>
+  <button type="reset" value="reset">Reset</button></td>
+</td>
+</tr>
+
+</table>
+</form>
+</body>
+</html>
