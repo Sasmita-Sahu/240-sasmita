@@ -1,0 +1,51 @@
+<html>
+   <head>
+      <title>The jQuery Example</title>
+      <script type = "text/javascript" 
+         src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
+      </script>
+      <script type="text/javascript" language= "javascript">
+
+        var rows = [{
+        empid: "E001",
+        name: "Mona",
+        salary:"5lpa"
+    }, {
+        empid: "E001",
+        name: "Mona",
+        salary:"2lpa"
+    }, {
+        empid: "E001",
+        name: "Mona",
+        salary:"3lpa"
+    }];
+
+        $(document).ready(function () {
+    var html = "<table border='1'>";
+    for (var i = 0; i < rows.length; i++) {
+        html+="<tr>";
+        html+="<td>"+rows[i].empid+"</td>";
+        html+="<td>"+rows[i].name+"</td>";
+        html+="<td>"+rows[i].salary+"</td>";
+
+        
+        html+="</th>";
+
+    }
+    html+="</table>";
+    $("div").html(html);
+});
+
+    </script>
+    <body>
+        <center>
+            <table class="table" id="myTable" border="1">
+                <tr>
+                    <th>Emp Id</th>
+                    <th>Name</th>
+                    <th>Salary</th>
+                </tr>
+            </table>
+        </center>
+</body>
+</html>
